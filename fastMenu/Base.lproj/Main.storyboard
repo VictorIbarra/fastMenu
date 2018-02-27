@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1114" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fastMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="viF-vk-cXy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b7i-cB-3ZQ">
+                                    <size key="itemSize" width="266" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="comidaCell" id="wDs-DU-svC" customClass="menuCollectionViewCell" customModule="fastMenu" customModuleProvider="target">
+                                        <rect key="frame" x="54.5" y="0.0" width="266" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="266" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d1i-0Z-8lJ">
+                                                    <rect key="frame" x="8" y="8" width="250" height="164"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lut-PZ-TdK">
+                                                    <rect key="frame" x="20" y="139" width="226" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Dff-kU-wpM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" red="0.012083063470000001" green="0.0039616585529999998" blue="0.00436467244" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <size key="shadowOffset" width="-1" height="1"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Lut-PZ-TdK" secondAttribute="trailing" constant="12" id="3CC-JQ-zg4"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="d1i-0Z-8lJ" secondAttribute="bottom" id="HNy-PM-RzW"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="d1i-0Z-8lJ" secondAttribute="trailing" id="IQp-uB-VAV"/>
+                                            <constraint firstItem="d1i-0Z-8lJ" firstAttribute="leading" secondItem="wDs-DU-svC" secondAttribute="leadingMargin" id="S67-4L-WKg"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Lut-PZ-TdK" secondAttribute="bottom" constant="12" id="mQ8-Kx-KHU"/>
+                                            <constraint firstItem="Lut-PZ-TdK" firstAttribute="leading" secondItem="wDs-DU-svC" secondAttribute="leadingMargin" constant="12" id="tnP-xy-mcB"/>
+                                            <constraint firstItem="d1i-0Z-8lJ" firstAttribute="top" secondItem="wDs-DU-svC" secondAttribute="topMargin" id="w6A-eO-OJm"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="comidaLabel" destination="Lut-PZ-TdK" id="fDy-ff-g23"/>
+                                            <outlet property="imagenComida" destination="d1i-0Z-8lJ" id="s3a-mA-BnX"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="viF-vk-cXy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AcI-h0-wo9"/>
+                            <constraint firstItem="viF-vk-cXy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AjZ-pj-pkM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="viF-vk-cXy" secondAttribute="bottom" id="KTT-sR-yrW"/>
+                            <constraint firstAttribute="trailing" secondItem="viF-vk-cXy" secondAttribute="trailing" id="vqm-E3-bvt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="menuCollectionView" destination="viF-vk-cXy" id="nLK-BV-79n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
